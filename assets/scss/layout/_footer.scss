@@ -1,0 +1,20 @@
+.footer {
+  margin: 2em auto 4em;
+  position: relative;
+  width: 100%;
+}
+
+.site-info {
+  color: var(--color-text-secondary);
+  .copyright-info {
+    text-align: center;
+  }
+
+  .hugo-info {
+    text-align: center;
+  }
+}
+
+.social {
+  text-align: center;
+}

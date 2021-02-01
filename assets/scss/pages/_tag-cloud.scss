@@ -1,0 +1,12 @@
+.tag-cloud {
+  a {
+    display: inline-block;
+    position: relative;
+    margin: 5px 10px;
+    word-wrap: break-word;
+  }
+
+  small {
+    color: var(--color-text-secondary);
+  }
+}

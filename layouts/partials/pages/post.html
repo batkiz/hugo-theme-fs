@@ -1,0 +1,67 @@
+<main class="main" id="main">
+    <div class="main-inner">
+
+        <article class="content">
+
+            <header class="post-header">
+                {{ with .Params.featured_image }}
+                {{- $img := . -}}
+                <img src="{{ printf " %s" $img }}" class="featured-image">
+                {{ end }}
+
+                <h1 class="post-title">
+                    {{ .Title }}
+                </h1>
+                <div class="post-meta">
+                    <div class="author">
+                        {{ if isset .Params "author" }}
+                        {{ .Params.author }}
+                        {{ else }}
+                        {{ .Site.Params.author }}
+                        {{ end }}
+                    </div>
+
+                    <div class="post-date">
+                        {{ .Date.Format "2006-01-02" }}
+                    </div>
+
+                    <div class="post-tags">
+                        {{ if ne .Type "page" }}
+                        {{ if gt .Params.tags 0 }}
+                        <nav class="nav tags">
+                            <ul class="tags">
+                                {{ range .Params.tags }}
+                                <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a></li>
+                                {{ end }}
+                            </ul>
+                        </nav>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                </div>
+            </header>
+
+            <div class="post-content">
+                {{ partial "utils/content.html" . }}
+            </div>
+
+        </article>
+
+        {{ if eq .Type "posts" }}
+        {{ partial "components/copyright.html" . }}
+        {{ end }}
+
+        <div class="post-nav">
+            {{ if .PrevInSection }}
+            <a href="{{.PrevInSection.Permalink}}" class="prev" rel="prev" title="{{ .PrevInSection.Title}}">
+                ← {{ .PrevInSection.Title}}
+            </a>
+            {{ end }}
+            {{ if .NextInSection }}
+            <a href="{{.NextInSection.Permalink}}" class="next" rel="next" title="{{.NextInSection.Title}}">
+                {{.NextInSection.Title}} →
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</main>

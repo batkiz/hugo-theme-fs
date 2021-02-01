@@ -1,0 +1,25 @@
+@mixin light-theme {
+  --theme-name: "light";
+
+  --color-accent-0: #121212;
+  --color-accent-1: #1f2430; // from vscode theme Ayu Mirage
+  --color-accent-2: #3f3f3f;
+  --color-accent-3: #a9a9b3;
+  --color-accent-4: #bfbfbf;
+  --color-accent-5: #e8e6e3; // from msdn docs
+  --color-accent-6: #efefef;
+  --color-accent-7: #ffffff;
+  // --color-background-transparent: rgba(31, 31, 31, 0);
+  --color-background: var(--color-accent-7);
+  --color-background-secondary: var(--color-accent-6);
+  --color-text-primary: var(--color-accent-0);
+  --color-text-secondary: var(--color-accent-3);
+  //  high contrast link color in light mode (changable)
+  --color-link: #66ccff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    @include light-theme;
+  }
+}

@@ -1,0 +1,15 @@
+<!-- math -->
+{{ if .Params.katex }}
+{{ partial "third-party/katex.html" . }}
+{{ end }}
+
+<!-- pictures -->
+{{ partial "third-party/medium-zoom.html" . }}
+
+<!-- code highlight -->
+{{ partial "third-party/prism.html" . }}
+
+<!-- web analytics -->
+{{ template "_internal/google_analytics_async.html" . }}
+
+{{ partial "third-party/cloudflare-web-analytics.html" . }}

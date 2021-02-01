@@ -1,0 +1,34 @@
+<div class="copyright">
+    <div class="copyright-title">
+        {{ .Title }}
+    </div>
+    <div class="copyright-link">
+        <a href="{{ .Permalink }}" rel="external nofollow noopenner" target="_blank" one-link-mark="yes">
+            {{ .Permalink }}
+        </a>
+    </div>
+    <div class="copyright-meta">
+        {{ with .Site.Params.author }}
+        <div class="copyright-meta-item">
+            <div class="copyright-meta-title">{{ i18n "copyrightAuthor" }}</div>
+            <div class="copyright-meta-text">{{ . }}</div>
+        </div>
+        {{ end }}
+
+        <div class="copyright-meta-item">
+            <div class="copyright-meta-title">{{ i18n "copyrightRealeased"}}</div>
+            <div class="copyright-meta-text">{{ .Date.Format "2006-01-02" }}</div>
+        </div>
+
+        {{ with .Site.Params.license }}
+        <div class="copyright-meta-item">
+            <div class="copyright-meta-title">{{ i18n "copyrightLicense" }}</div>
+            <div class="copyright-meta-text">{{ . | safeHTML }}</div>
+        </div>
+        {{ end }}
+
+    </div>
+    {{ with .Site.Params.licenseText }}
+    <div>{{ . }}</div>
+    {{ end }}
+</div>

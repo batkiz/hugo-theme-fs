@@ -1,0 +1,27 @@
+nav {
+  //    display: flex;
+  position: relative;
+  padding-bottom: 4em;
+
+  a {
+    border-bottom: none;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: transparent;
+  }
+}
+
+.navbar-header {
+  text-align: left;
+  float: left;
+}
+
+.menu {
+  text-align: right;
+  float: right;
+}
+
+.menu-item {
+  padding: var(--gap-s);
+}

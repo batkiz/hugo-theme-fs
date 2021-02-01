@@ -1,0 +1,38 @@
+.social {
+  margin: 4em auto 1em;
+  text-align: center;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      & + li {
+        margin-left: var(--gap-m);
+      }
+    }
+  }
+
+  a {
+    border-bottom: none;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: transparent;
+  }
+}
+
+.socials-item {
+  display: inline-block;
+}
+
+.social-icon {
+  width: 8em;
+  fill: var(--color-text-primary);
+}
+
+svg {
+  max-height: 2em;
+  max-width: 2em;
+}

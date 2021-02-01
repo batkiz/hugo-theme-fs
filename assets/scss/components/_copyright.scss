@@ -1,0 +1,43 @@
+.copyright {
+  position: relative;
+  line-height: 1.2;
+  font-size: 1rem;
+  text-align: left;
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  margin: 0 auto 0;
+  overflow: hidden;
+  display: block;
+  padding: 1.25em 1.5em;
+  max-width: 80%;
+}
+
+.copyright-title {
+  margin: 0 0 0.25rem;
+}
+
+.copyright-link {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.copyright-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.copyright-meta-item {
+  margin: 0 2rem 1em 0;
+}
+
+.copyright-meta-title {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+}
+
+.copyright-meta-text {
+  margin: 0;
+}

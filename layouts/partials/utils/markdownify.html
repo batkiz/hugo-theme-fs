@@ -1,0 +1,14 @@
+{{- $ := index . "$" -}}
+{{- $Content := .raw -}}
+{{- $isContent := .isContent -}}
+
+<!-- Markdownify -->
+{{- if not $isContent -}}
+    {{- $Content = $Content | markdownify -}}
+{{- end -}}
+
+<!-- External Links -->
+
+{{- $Content = replaceRE `(<a href="https?:[^"]+")` `$1 target="_blank" rel="noopener"` $Content -}}
+
+{{- $Content | safeHTML -}}

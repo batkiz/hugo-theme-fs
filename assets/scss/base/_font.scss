@@ -1,0 +1,45 @@
+// serif code Noto Sans Serif SC
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap");
+// Noto Serif
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+// monospace font Fira Code
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+
+@mixin font {
+  --font-serif: "Noto Serif", "Noto Serif CJK SC", "Noto Serif CJK",
+    "Source Han Serif SC", "Source Han Serif", source-han-serif-sc,
+    "Noto Serif SC", serif;
+
+  --font-mono: "Fira Code", monospace;
+
+  // Headline font sizes
+  --font-size-1: 2rem;
+  --font-size-2: 1.5rem;
+  --font-size-3: 1.25rem;
+  --font-size-4: 1.125rem;
+  --font-size-5: 1rem;
+  --font-size-6: 0.875rem;
+  --font-size-7: 0.75rem;
+  // Other font sizes
+  --font-size-code: var(--font-size-7);
+  --font-size-footnotes: var(--font-size-7);
+  --font-size-small: var(--font-size-7);
+  --font-size-sub-sup: var(--font-size-7);
+  // font line-height
+  --line-height-base: 1.7778;
+  --line-height-code: 1.4;
+  --line-height-headline: 1.2;
+
+  /**
+   * Design System: Spacing
+   */
+  --gap-s: 0.4445rem;
+  --gap-m: 0.8889rem;
+  --gap-l: 1.7778rem;
+  --gap-xl: 3.5556rem;
+}
+
+:root {
+  @include font;
+}

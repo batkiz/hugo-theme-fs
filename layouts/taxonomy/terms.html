@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<h1 class="page-title">{{ .Title }}</h1>
+
+<div class="list">
+    {{ range (.Pages.GroupByDate "2006") }}
+    <h2>{{ .Key }}</h2>
+
+    {{ range .Pages }}
+    <article class="list-item">
+        <a href="{{ .RelPermalink }}" class="list-item-title">{{ .Title }}</a>
+        <span class="list-item-date">
+            {{ replace (.Date.Format "2006-01-02") "-" " / " }}
+        </span>
+    </article>
+    {{ end }}
+    {{ end }}
+</div>
+
+
+{{ end }}

@@ -1,0 +1,20 @@
+[copyrightAuthor]
+other = "本文作者"
+
+[copyrightRealeased]
+other = "发布于"
+
+[copyrightLicense]
+other = "许可协议"
+
+[ellipsis]
+other = "……"
+
+[pageNotFound]
+other = "404 - 页面不存在"
+
+
+
+[allPosts]
+other = "所有文章"
+

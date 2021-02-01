@@ -1,0 +1,19 @@
+.list {
+  position: relative;
+  width: 100%;
+}
+
+
+.list-item-title {
+  display: inline-block;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-item-date {
+  float: right;
+  text-align: right;
+  color: var(--color-text-secondary);
+}

@@ -1,0 +1,28 @@
+<footer id="footer" class="footer">
+    <section>
+        <div class="social">
+            {{ partial "components/social.html" . }}
+        </div>
+        <div class="site-info">
+            <div class="copyright-info">
+                &copy;
+                {{ with .Site.Params.since }}
+                <span itemprop="copyrightYear">{{.}} - {{ now.Year }}</span>
+                {{ end }}
+
+                {{ if .Site.Params.author }}
+                <span class="author" itemprop="copyrightHolder">{{ .Site.Params.author }}</span>
+                {{ end }}
+            </div>
+
+            <div class="hugo-info">
+                <span>Built with <a href="https://gohugo.io/" target="_blank"
+                        rel="external nofollow noopener noreffer">Hugo</a>, theme <a
+                        href="https://github.com/batkiz/hugo-theme-fs" target="_blank"
+                        rel="external nofollow noopener noreffer">fs</a>
+                </span>
+            </div>
+
+        </div>
+    </section>
+</footer>

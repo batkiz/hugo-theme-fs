@@ -1,0 +1,12 @@
+name = "fs"
+homepage = "https://github.com/batkiz/hugo-theme-fs"
+license = "MIT"
+licenselink = "https://github.com/batkiz/hugo-theme-fs/blob/master/LICENSE.md"
+description = "Hugo theme for personal."
+tags = ["blog", "simple", "minimal", "personal", "clean", "shortcodes"]
+features = ["Dark Mode", "KaTeX", "Syntax highlighting"]
+min_version = "0.80.0"
+
+[author]
+name = "batkiz"
+homepage = "https://github.com/batkiz"

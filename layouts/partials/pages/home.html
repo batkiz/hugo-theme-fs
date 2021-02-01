@@ -1,0 +1,21 @@
+<main class="home">
+    <div class="main-inner">
+        <div class="content">
+            <img src="{{ .Site.Params.avatar }}" class="avatar" />
+            <h1 class="subtitle">{{ .Site.Params.subtitle }}</h1>
+        </div>
+
+        <div class="list">
+            {{ range first 5 .Site.RegularPages }}
+            <article class="list-item">
+                <a href="{{ .RelPermalink }}" class="list-item-title">{{ .Title }}</a>
+            </article>
+            {{ end }}
+        </div>
+        <div class="read-more">
+            <a href="{{ .Site.BaseURL }}posts">
+                {{ i18n "allPosts" }}
+            </a>
+        </div>
+    </div>
+</main>
