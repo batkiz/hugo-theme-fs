@@ -48,8 +48,8 @@
         </article>
 
         {{ if eq .Type "posts" }}
+
         {{ partial "components/copyright.html" . }}
-        {{ end }}
 
         <div class="post-nav">
             {{ if .PrevInSection }}
@@ -63,5 +63,7 @@
             </a>
             {{ end }}
         </div>
+        {{ end }}
+
     </div>
 </main>
