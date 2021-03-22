@@ -6,7 +6,7 @@
             <header class="post-header">
                 {{ with .Params.featured_image }}
                 {{- $img := . -}}
-                <img src="{{ printf " %s" $img }}" class="featured-image">
+                <img src="{{ printf "%s" $img }}" class="featured-image">
                 {{ end }}
 
                 <h1 class="post-title">
