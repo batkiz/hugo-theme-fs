@@ -1,0 +1,15 @@
+{{ if .Site.Params.enableCusdis }}
+<div
+    id="cusdis_thread"
+
+    {{ with .Site.Params.cusdisHost | default "https://cusdis.com" }}data-host="{{ . }}"{{ end }}
+
+    {{ with .Site.Params.cusdisAppID }} data-app-id="{{ . }}" {{ end }}
+
+    {{ with .RelPermalink }} data-page-id="{{ . }}" {{end}}
+    {{ with .Permalink }} data-page-url="{{ . }}" {{end}}
+    {{ with .Title }} data-page-title="{{ . }}" {{end}}
+    >
+</div>
+<script async src="https://cusdis.com/js/cusdis.es.js"></script>
+{{ end }}

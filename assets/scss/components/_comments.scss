@@ -1,0 +1,24 @@
+.comments {
+  padding: 1.25em 1.5em;
+  text-align: left;
+  color: var(--color-text-primary);
+}
+
+.cusdis-comment-nickname {
+  color: var(--color-text-primary);
+}
+
+.cusdis-link-btn {
+  color: var(--color-link);
+}
+
+.cusdis-comment-date {
+  color: var(--color-text-secondary);
+  background-color: var(--color-background-secondary);
+}
+
+.cusdis-comment-content {
+  p {
+    color: var(--color-text-primary);
+  }
+}
